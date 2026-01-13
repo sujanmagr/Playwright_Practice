@@ -11,8 +11,6 @@ def test_login(page:Page):
 
     page.get_by_role("button", name="Login").click()
 
-
-
     expect(page).to_have_title("Swag Labs")
-
+    #click add to cart button. As ther are many add to cart button it click s the first add to click button 
     page.get_by_role("button", name="Add to cart").first.click()
