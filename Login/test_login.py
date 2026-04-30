@@ -1,5 +1,4 @@
-import re
-
+# import re
 from playwright.sync_api import Page, expect
 
 def test_login(page:Page):
@@ -14,3 +13,4 @@ def test_login(page:Page):
     expect(page).to_have_title("Swag Labs")
     #click add to cart button. As ther are many add to cart button it click s the first add to click button 
     page.get_by_role("button", name="Add to cart").first.click()
+    page.screenshot(path="addtocart.jpg")
